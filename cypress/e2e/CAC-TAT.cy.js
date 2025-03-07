@@ -34,7 +34,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       .should('have.value', '')
   })
 
-  it.only('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
+  it('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
     const longText = Cypress._.repeat('leo', 20)
 
     cy.get('#firstName').type('leonardo')
@@ -45,5 +45,31 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('button[type="submit"]').click()
 
     cy.get('.error').should('be.visible')
+  })
+
+  it.only('preenche e limpa os campos nome, sobrenome, email e telefone', () => {
+    cy.get('#firstName')
+      .type('leonardo')
+      .should('have.value', 'leonardo')
+      .clear()
+      .should('have.value', '')
+    cy.get('#lastName')
+      .type('laurindo')
+      .should('have.value', 'laurindo')
+      .clear()
+      .should('have.value', '')
+    cy.get('#email')
+      .type('leo@gmail.com')
+      .should('have.value', 'leo@gmail.com')
+      .clear()
+      .should('have.value', '')
+    cy.get('#phone')
+      .type('999999999')
+      .should('have.value', '999999999')
+      .clear()
+      .should('have.value', '')
+
+      .should('be.visible', '')
+      
   })
 })
