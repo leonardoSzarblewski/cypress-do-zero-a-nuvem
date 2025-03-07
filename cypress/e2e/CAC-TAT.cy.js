@@ -28,9 +28,22 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('.error').should('be.visible')
   })
 
-  it.only('Campo telefone continuavazio quando escrevo valores não-numéricos',() => {
+  it('Campo telefone continua vazio quando escrevo valores não-numéricos',() => {
     cy.get('#phone')
       .type('teste')
       .should('have.value', '')
+  })
+
+  it.only('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
+    const longText = Cypress._.repeat('leo', 20)
+
+    cy.get('#firstName').type('leonardo')
+    cy.get('#lastName').type('laurindo')
+    cy.get('#email').type('leo@gmail.com')
+    cy.get('#phone-checkbox').click()
+    cy.get('#open-text-area').type(longText, { delay: 0 })
+    cy.get('button[type="submit"]').click()
+
+    cy.get('.error').should('be.visible')
   })
 })
