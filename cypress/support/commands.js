@@ -1,9 +1,9 @@
-Cypress.Commands.add('fillMandatoryFieldsAndSubmit', () => {
+Cypress.Commands.add('fillMandatoryFieldsAndSubmit', data => {
     const longText = Cypress._.repeat('leo', 20)
 
-    cy.get('#firstName').type('leonardo')
-    cy.get('#lastName').type('laurindo')
-    cy.get('#email').type('leo@gmail.com')
-    cy.get('#open-text-area').type(longText, { delay: 0 })
+    cy.get('#firstName').type(data.firstName)
+    cy.get('#lastName').type(data.lastName)
+    cy.get('#email').type(data.email)
+    cy.get('#open-text-area').type(data.text)
     cy.get('button[type="submit"]').click()
 })
