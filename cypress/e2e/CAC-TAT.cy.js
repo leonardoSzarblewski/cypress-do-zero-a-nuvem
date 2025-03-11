@@ -69,7 +69,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
      .should('have.value', 'youtube')
   })
 
-  it.only('seleciona um produto (Mentoria) por seu valor (value)', () => {
+  it('seleciona um produto (Mentoria) por seu valor (value)', () => {
     cy.get('#product')
      .select('mentoria')
      .should('have.value', 'mentoria')
@@ -79,5 +79,15 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('#product')
      .select(1)
      .should('have.value', 'blog')
+  })
+
+  it('marca o tipo de atendimento "Feedback"', () => {
+    cy.get('input[type="radio"][value="feedback"]')
+      .check()
+      .should('be.checked')
+  })
+
+  it.only('marca cada tipo de atendimento', () => {
+    
   })
 })
