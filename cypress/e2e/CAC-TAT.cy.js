@@ -77,14 +77,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
   })
 
   it.only('envia o formuário com sucesso usando um comando customizado', () => {
-    const data = {
-      firstName: 'leo',
-      lastName: 'laurindo',
-      email: 'leo@gmail.com',
-      text: 'teste'
-    }
-
-    cy.fillMandatoryFieldsAndSubmit(data)
+    cy.fillMandatoryFieldsAndSubmit()
 
     cy.get('.success').should('be.visible')
   })

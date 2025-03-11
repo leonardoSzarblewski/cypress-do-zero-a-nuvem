@@ -1,4 +1,9 @@
-Cypress.Commands.add('fillMandatoryFieldsAndSubmit', data => {
+Cypress.Commands.add('fillMandatoryFieldsAndSubmit', ( data = {
+    firstName: 'teste1',
+    lastName: 'silva',
+    email: 'test@gmail.com',
+    text: 'ok testando 123'
+}) => {
     const longText = Cypress._.repeat('leo', 20)
 
     cy.get('#firstName').type(data.firstName)
