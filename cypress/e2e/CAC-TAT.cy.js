@@ -46,7 +46,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('.error').should('be.visible')
   })
 
-  it.only('preenche e limpa os campos nome, sobrenome, email e telefone', () => {
+  it('preenche e limpa os campos nome, sobrenome, email e telefone', () => {
     cy.fillAndCleanInputs()
   })
 
@@ -61,5 +61,11 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.fillMandatoryFieldsAndSubmit()
 
     cy.get('.success').should('be.visible')
+  })
+
+  it.only('seleciona um produto (YouTube) por seu texto', () => {
+    cy.get('#product')
+     .select('YouTube')
+     .should('have.value', 'youtube')
   })
 })
