@@ -1,28 +1,25 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+## Central de Atendimento ao Cliente TAT
 
-👋 Seja bem-vindo(a)!
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+Projeto de estudo sobre testes automatizados do curso Talking About Testing
 
-## O que você vai aprender?
+### Pré-requisitos
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+- É necessário ter o Node.js e o npm instalados para executar este projeto.
 
-## Vamos começar?
+>Eu usei versões v22.14.0e do Node.js e 11.1.0 do npm
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+### Instalação
+- Execute npm install(ou npm ipara a versão curta) para instalar as dependências de desenvolvimento.
 
-___
+### Testes
+- Para executar o teste basta abrir o terminar e executar o comando ` npm run cy:open `
+- Para executar o teste em modo Headless basta executar o comando ` npm run test:headless `
+- Para executar o teste com dimensões para mobile basta executar o comando ` mobile:teste `
+- Para executar o teste com dimensões para mobile em modo Headless basta executar o comando ` mob:headless `
 
-Este é um curso da **Escola Talking About Testing**.
+### Apoie este projeto
+
+Se você quiser apoiar este projeto, deixe um ⭐.
+
+Este projeto foi criado com 💚 por Leonardo Szarblewski.
