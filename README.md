@@ -20,6 +20,4 @@ Projeto de estudo sobre testes automatizados do curso Talking About Testing
 
 ### Apoie este projeto
 
-Se você quiser apoiar este projeto, deixe um ⭐.
-
 Este projeto foi criado com 💚 por Leonardo Szarblewski.
