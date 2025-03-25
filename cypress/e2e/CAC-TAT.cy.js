@@ -160,7 +160,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.contains('h1', 'CAC TAT - Política de Privacidade').should('be.visible')
   })
 
-  it.only('exibe e oculta as mensagens de sucesso e erro usando .invoke()', () => {
+  it('exibe e oculta as mensagens de sucesso e erro usando .invoke()', () => {
     cy.get('.error')
       .should('not.be.visible')
       .invoke('show')
@@ -176,5 +176,13 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       .and('contain', 'Mensagem enviada com sucesso.')
       .invoke('hide')
       .should('not.be.visible')
+  })
+
+  it.only('preenche o campo da área de texto usando o comando invoke.', () => {
+    const longText = Cypress._.repeat('leo', 20)
+
+    cy.get('#open-text-area')
+      .invoke('val', longText)
+      .should('have.value', longText)
   })
 })
