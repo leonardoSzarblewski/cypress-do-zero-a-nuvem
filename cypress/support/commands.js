@@ -34,3 +34,4 @@ Cypress.Commands.add('fillAndCleanInputs', () => {
       .clear()
       .should('have.value', '')
 })
+
