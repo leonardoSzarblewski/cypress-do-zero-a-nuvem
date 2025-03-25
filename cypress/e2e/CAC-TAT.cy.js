@@ -8,7 +8,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.title().should('be.equal','Central de Atendimento ao Cliente TAT')
   })
   
-  it('preenche os campos obrigatórios e envia o formulário', () => {
+  it('preenche os campos obrigatórios e envia o formulário', () => { 
     const longText = Cypress._.repeat('leo', 20)
 
     cy.clock()
@@ -37,7 +37,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
   })
 
   it('Campo telefone continua vazio quando escrevo valores não-numéricos',() => {
-    cy.get('#phone')
+      cy.get('#phone')
       .type('teste')
       .should('have.value', '')
   })
@@ -77,10 +77,12 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('.success').should('be.visible')
   })
 
-  it('seleciona um produto (YouTube) por seu texto', () => {
-    cy.get('#product')
-     .select('YouTube')
-     .should('have.value', 'youtube')
+  Cypress._.times(3, () => {
+    it.only('seleciona um produto (YouTube) por seu texto', () => {
+      cy.get('#product')
+       .select('YouTube')
+       .should('have.value', 'youtube')
+    })
   })
 
   it('seleciona um produto (Mentoria) por seu valor (value)', () => {
