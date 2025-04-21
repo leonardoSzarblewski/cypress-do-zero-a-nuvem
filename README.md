@@ -10,7 +10,7 @@ Projeto de estudo sobre testes automatizados do curso Talking About Testing
 >Eu usei versões v22.14.0e do Node.js e 11.1.0 do npm
 
 ### Instalação
-- Execute npm install (ou npm ipara a versão curta) para instalar as dependências de desenvolvimento.
+- Execute npm install (ou npm i para a versão curta) para instalar as dependências de desenvolvimento.
 
 ### Testes
 - Para executar o teste basta abrir o terminar e executar o comando ` npm run cy:open `
