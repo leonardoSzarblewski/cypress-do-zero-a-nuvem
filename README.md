@@ -7,7 +7,7 @@ Projeto de estudo sobre testes automatizados do curso Talking About Testing
 
 - É necessário ter o Node.js e o npm instalados para executar este projeto.
 
->Eu usei versões v22.14.0e do Node.js e 11.1.0 do npm
+>Eu usei versões v22.14.0 do Node.js e 11.1.0 do npm
 
 ### Instalação
 - Execute npm install (ou npm i para a versão curta) para instalar as dependências de desenvolvimento.
